@@ -6,6 +6,10 @@ mat-header-cell, mat-cell {
   justify-content: center;
 }
 
+mat-row:hover {
+  cursor: pointer;
+}
+
 .icon-button {
   background: none;
   border: none;
