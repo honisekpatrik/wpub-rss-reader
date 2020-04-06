@@ -70,6 +70,7 @@ export class AppComponent implements OnInit {
     const dialogRef = this.dialog.open(ItemViewComponent, {
       maxHeight: '95vh',
       maxWidth: '90vw',
+      minWidth: '65vw',
       data: element
     });
   }
