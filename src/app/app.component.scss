@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+mat-header-cell, mat-cell {
+  justify-content: center;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+
+  :hover {
+    cursor: pointer;
+  }
+}
