@@ -1,38 +1,27 @@
 <div>
-  <div>
-    <mat-form-field appearance="fill">
+  <div class="mt-5 text-center">
+    <mat-form-field appearance="fill" class="mr-3">
       <mat-label>Url</mat-label>
       <input [formControl]="urlForm" matInput>
     </mat-form-field>
-    <button mat-button (click)="loadFeed()">Read</button>
+    <button mat-button (click)="loadFeed()" class="my-auto">Read</button>
   </div>
 
-  <div class="mat-elevation-z8">
+  <div class="col-sm-10 col-12 mx-auto mat-elevation-z8">
     <mat-table [dataSource]="dataSource" matSort>
 
       <ng-container matColumnDef="pubDate">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Publish date</mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{getDate(element.pubDate[0]) | date : 'medium'}} </mat-cell>
+        <mat-header-cell class="col-4" *matHeaderCellDef mat-sort-header> Publish date</mat-header-cell>
+        <mat-cell class="col-4" *matCellDef="let element"> {{getDate(element.pubDate[0]) | date : 'medium'}} </mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="title">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Title</mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="read">
-        <mat-header-cell *matHeaderCellDef> Read</mat-header-cell>
-        <mat-cell *matCellDef="let element">
-          <div class="row justify-content-center">
-            <button class="mx-2 icon-button">
-              <mat-icon (click)="read(element)">description</mat-icon>
-            </button>
-          </div>
-        </mat-cell>
+        <mat-header-cell class="col-8" *matHeaderCellDef mat-sort-header> Title</mat-header-cell>
+        <mat-cell class="col-8" *matCellDef="let element"> {{element.title}} </mat-cell>
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      <mat-row (click)="read(row)"  *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
   </div>
 </div>

@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 
   urlForm = new FormControl('');
 
-  displayedColumns: string[] = ['pubDate', 'title', 'read'];
+  displayedColumns: string[] = ['pubDate', 'title'];
   dataSource: MatTableDataSource<any>;
 
   @ViewChild(MatSort, {static: true}) tableSort: MatSort;
@@ -68,7 +68,8 @@ export class AppComponent implements OnInit {
     console.log(element);
 
     const dialogRef = this.dialog.open(ItemViewComponent, {
-      width: '90vw',
+      maxHeight: '95vh',
+      maxWidth: '90vw',
       data: element
     });
   }
