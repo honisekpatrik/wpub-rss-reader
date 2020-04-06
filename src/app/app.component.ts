@@ -4,6 +4,8 @@ import {FeedReaderService} from './feed-reader.service';
 import {FormControl} from '@angular/forms';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
+import {ItemViewComponent} from './item-view/item-view.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +27,7 @@ export class AppComponent implements OnInit {
 
   @ViewChild(MatSort, {static: true}) tableSort: MatSort;
 
-  constructor(private feedService: FeedReaderService) {
+  constructor(private feedService: FeedReaderService, private dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -64,5 +66,10 @@ export class AppComponent implements OnInit {
 
   read(element) {
     console.log(element);
+
+    const dialogRef = this.dialog.open(ItemViewComponent, {
+      width: '90vw',
+      data: element
+    });
   }
 }

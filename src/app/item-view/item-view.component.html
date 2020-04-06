@@ -1,0 +1,11 @@
+
+<div mat-dialog-content class="text-center justify-content-center">
+  <h1>{{data.title}}</h1>
+  <h6>{{getDate(data.pubDate) | date : 'medium'}}</h6>
+  <h3>{{data.description}}</h3>
+  <a href="{{data.link}}" target="_blank">Read more</a><br>
+  <img src="{{data.enclosure[0].$.url}}" alt="Image of report">
+</div>
+<div mat-dialog-actions class="justify-content-center">
+  <button mat-button (click)="close()">Close</button>
+</div>
