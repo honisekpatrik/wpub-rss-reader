@@ -10,7 +10,7 @@ export class FeedReaderService {
   constructor(private http: HttpClient) {}
 
   readFeed(source: string): Observable<any> {
-    return this.http.post('http://webp.itprof.sk:8000/fetchurl',
+    return this.http.post('https://webp.itprof.sk/fetchurl',
       {url: source},
       {
         responseType: 'text',
