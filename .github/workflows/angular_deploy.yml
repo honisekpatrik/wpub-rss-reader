@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Angular deploy
-      uses: honisekpatrik/wpub-rss-reader
+      uses: honisekpatrik/wpub-rss-reader@master
       with:
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
         build_configuration: production
