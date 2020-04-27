@@ -19,5 +19,4 @@ jobs:
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
         build_configuration: production
         base_href: https://honisekpatrik.github.io/wpub-rss-reader/
-        deploy_branch: deployment
         build_folder: dist/rss-citacka
