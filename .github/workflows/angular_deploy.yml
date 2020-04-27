@@ -1,0 +1,22 @@
+name: Deploy job
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: 
+      - master
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Angular deployment v2
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@master
+      with:
+        github_access_token: ${{ secrets.ACCESS_TOKEN }}
+        build_configuration: production
+        base_href: https://honisekpatrik.github.io/wpub-rss-reader/
+        build_folder: dist/rss-citacka
