@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout
+    - uses: actions/checkout@master
     - name: Angular deploy
       uses: honisekpatrik/wpub-rss-reader@master
       with:
