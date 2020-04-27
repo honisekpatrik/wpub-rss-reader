@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Angular deployment
+    - name: Angular deployment v2
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@master
       with:
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
