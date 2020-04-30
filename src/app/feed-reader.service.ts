@@ -10,13 +10,10 @@ export class FeedReaderService {
   constructor(private http: HttpClient) {}
 
   readFeed(source: string): Observable<any> {
-    return this.http.post('https://webp.itprof.sk/fetchurl',
-      {url: source},
+    return this.http.get('https://cors-anywhere.herokuapp.com/https://www.sme.sk/rss-title',
       {
-        responseType: 'text',
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/rss+xml'
+          Origin: 'www.sme.sk',
         }
       });
   }
