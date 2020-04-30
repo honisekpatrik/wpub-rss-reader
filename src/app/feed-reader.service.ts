@@ -10,10 +10,10 @@ export class FeedReaderService {
   constructor(private http: HttpClient) {}
 
   readFeed(source: string): Observable<any> {
-    return this.http.get('https://cors-anywhere.herokuapp.com/https://www.sme.sk/rss-title',
+    return this.http.get(source,
       {
         headers: {
-          Origin: 'www.sme.sk',
+          'x-requested-with': source,
         }
       });
   }
