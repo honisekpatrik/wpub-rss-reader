@@ -13,6 +13,7 @@ export class FeedReaderService {
   readFeed(source: string): Observable<any> {
     return this.http.get(`${this.endpoint}${source}`,
       {
+        responseType: 'text',
         headers: {
           'x-requested-with': source,
         }
