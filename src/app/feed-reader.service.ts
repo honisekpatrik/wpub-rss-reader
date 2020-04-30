@@ -6,11 +6,12 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class FeedReaderService {
+  endpoint = 'https://cors-anywhere.herokuapp.com/';
 
   constructor(private http: HttpClient) {}
 
   readFeed(source: string): Observable<any> {
-    return this.http.get(source,
+    return this.http.get(`${this.endpoint}${source}`,
       {
         headers: {
           'x-requested-with': source,
