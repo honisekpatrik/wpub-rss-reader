@@ -29,7 +29,7 @@ jobs:
     - run: npm ci
     - run: npm install -g @angular/cli
     - run: ng add angular-cli-ghpages
-    - run: ng deploy --no-silent --base-href=https://honisekpatrik.github.io/wpub-rss-reader/ --repo=https://github.com/honisekpatrik/wpub-rss-reader.git
+    - run: ng deploy --no-silent --name=honisekpatrik --email=patrik.honisek565@gmail.com --base-href=https://honisekpatrik.github.io/wpub-rss-reader/ --repo=https://github.com/honisekpatrik/wpub-rss-reader.git
       env: 
         GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
