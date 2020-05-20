@@ -12,4 +12,4 @@ GitHub repo: https://github.com/honisekpatrik/wpub-rss-reader
 
 Deployed: https://honisekpatrik.github.io/wpub-rss-reader/
 
-CD/CI: Deployment je robený pomocou GitHubPages, .yml súbor je .github/workflows/deploy.yml
+CI/CD: Deployment je robený pomocou GitHubPages, .yml súbor je .github/workflows/deploy.yml
